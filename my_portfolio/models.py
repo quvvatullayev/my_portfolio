@@ -31,6 +31,7 @@ class Education(models.Model):
     education_name = models.CharField(max_length=100)
     education_icon = models.ImageField(upload_to='images/')
     education_description = models.TextField()
+    education_link = models.CharField(max_length=100)
 
     def __str__(self):
         return self.education_name
@@ -38,6 +39,7 @@ class Education(models.Model):
 class Experience(models.Model):
     experience_name = models.CharField(max_length=100)
     experience_description = models.TextField()
+    experience_link = models.CharField(max_length=100)
 
     def __str__(self):
         return self.experience_name

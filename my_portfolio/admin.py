@@ -25,14 +25,14 @@ class SkillsAdmin(admin.ModelAdmin):
 
 @admin.register(Education)
 class EducationAdmin(admin.ModelAdmin):
-    list_display = ['education_name', 'education_icon', 'education_description']
-    fields = ['education_name', 'education_icon', 'education_description']
+    list_display = ['education_name', 'education_icon', 'education_description', 'education_link']
+    fields = ['education_name', 'education_icon', 'education_description', 'education_link']
     # exclude = ['education_name', 'education_icon', 'education_description']
 
 @admin.register(Experience)
 class ExperienceAdmin(admin.ModelAdmin):
-    list_display = ['experience_name', 'experience_description']
-    fields = ['experience_name', 'experience_description']
+    list_display = ['experience_name', 'experience_description', 'experience_link']
+    fields = ['experience_name', 'experience_description', 'experience_link']
 
 @admin.register(Projects)
 class ProjectsAdmin(admin.ModelAdmin):
