@@ -30,11 +30,11 @@ class Home(APIView):
         experience_serializer = ExperienceSerializer(experience, many=True)
         education_serializer = EducationSerializer(education, many=True)
         skills_serializer = SkillsSerializer(skills, many=True)
-
+        
         data = {
             "about_me": about_me_serializer.data,
             "experience": experience_serializer.data,
             "education": education_serializer.data,
             "skills": skills_serializer.data,
         }
-        return render(request, "home.html", data)
+        return render(request, "home.html", context=data)
