@@ -9,9 +9,9 @@
     <link rel=”stylesheet” href=”https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css”/>
     <title>home</title>
     <style>
-        .me_img{
-            height: 22lh;
-             width: auto;
+        .home_img{
+            width: 50%;
+            height: 50%;
         }
         body{
             background-color: #f5f5f5;
@@ -33,13 +33,17 @@
         .card_back{
           top:2px;
         }
+        .home_img{
+          width: auto;
+          height: 100%;
+        }
     </style>
 </head>
 <body>
    <div class="card mb-3 m-r-3 card_back" >
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="http://127.0.0.1:8000{{ about_me.0.photo }}" class="img-fluid rounded-start" alt="..." style="border-radius: 50%">
+            <img src="http://127.0.0.1:8000{{ about_me.0.photo }}" class="img-fluid rounded-start home_img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">

@@ -41,6 +41,12 @@
     {% for project in projects %}
     <div class="card mb-3 project_" >
         <div class="row g-0">
+            <div class="col-md-4">
+                <a href="{{ project.project_link }}">
+                    <img class="project_image" src="http://127.0.0.1:8000{{ project.project_image }}" class="img-fluid rounded-start" alt="...">
+                </a>
+                
+            </div>
             <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">{{ project.project_name }}</h5>
@@ -59,12 +65,6 @@
                     <a href="{{ project.project_link }}">{{ project.project_link }}</a>
                     </p>
             </div>
-            </div>
-            <div class="col-md-4">
-                <a href="{{ project.project_link }}">
-                    <img class="project_image" src="http://127.0.0.1:8000{{ project.project_image }}" class="img-fluid rounded-start" alt="...">
-                </a>
-                
             </div>
         </div>
         </div>
