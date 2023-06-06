@@ -1,6 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework.request import Request
+from django.shortcuts import render
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import TokenAuthentication
@@ -27,5 +28,8 @@ class Education_list(APIView):
     def get(self, request:Request):
         education = Education.objects.all()
         serializer = EducationSerializer(education, many=True)
-        return Response(serializer.data)
+        data = {
+            'educations':serializer.data
+        }
+        return render(request, 'education.html', data)
     
