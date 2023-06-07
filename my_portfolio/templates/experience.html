@@ -10,8 +10,13 @@
     <title>skills</title>
     <style>
         .h1_experience{
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 44px;
+            line-height: 54px;
+            color: #000000;
             text-align: center;
-            margin-top: 50px;
         }
         .card_experience{
             width: 70lvw;
@@ -25,6 +30,40 @@
         body{
             background-color: #f5f5f5;
         }
+        .me_title{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 30px;
+          line-height: 37px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: #000000;
+        }
+        .me_text{
+          font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+        text-align: left;
+        color: #000000;
+        opacity: 0.8;
+        }
+        .me_link{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 175.9%;
+          color: #6C63FF;
+          text-decoration: none;
+        }
+        .me_link:hover{
+          color: #6C63FF;
+          text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -32,9 +71,9 @@
     {% for experience in experiences %}
     <div class="card card_experience">
        <div class="card-body">
-          <h5 class="card-title">{{ experience.experience_name }}</h5>
-          <p class="card-text">{{ experience.experience_description }}.</p>
-          <a href="{{ experience.experience_link }}">{{ experience.experience_link }}</a>
+          <h5 class="card-title me_title">{{ experience.experience_name }}</h5>
+          <p class="card-text me_text">{{ experience.experience_description }}.</p>
+          <a class="me_link" href="{{ experience.experience_link }}">{{ experience.experience_link }}</a>
         </div>
       </div>
     {% endfor %}
