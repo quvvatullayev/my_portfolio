@@ -27,12 +27,17 @@
           opacity: 0.8;
         }
         .card_back{
-          top:2px;
           height: 100%;
         }
         .home_img{
-          width: auto;
-          height: auto;
+          border-radius: 50%;
+          border: solid 5px white;
+          height: 120%;
+          /* img center */
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 2.5lh;
         }
         .me_title{
           font-family: 'Montserrat';
@@ -41,7 +46,7 @@
           font-size: 44px;
           line-height: 54px;
           color: #000000;
-          text-align: left;
+          text-align: center;
         }
         .me_text{
           font-family: 'Montserrat';
@@ -97,15 +102,26 @@
           color: #6C63FF;
           text-decoration: underline;
         }
+        .home_b{
+          background-image: url('https://media.licdn.com/dms/image/D4E16AQFEOC9ZJMQmTw/profile-displaybackgroundimage-shrink_350_1400/0/1683974663472?e=1691625600&v=beta&t=I_yd9XnbEpzPE5StMfy-SgSd7rsEYVo5u3RcFUspFXA');
+          /* background-size: cover; */
+          height: 30lvh;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 100%;
+        }
+        .home_text{
+          margin-top: 3.3lh;
+        }
     </style>
 </head>
 <body>
    <div class="card mb-3 m-r-3 card_back" >
         <div class="row g-0">
-          <div class="col-md-4">
-            <img src="http://127.0.0.1:8000{{ about_me.0.photo }}" class="img-fluid rounded-start home_img" alt="...">
+          <div class="col-12 home_b">
+            <img src="http://127.0.0.1:8000{{ about_me.0.photo }}" class="home_img" alt="...">
           </div>
-          <div class="col-md-8">
+          <div class="col-12 home_text">
             <div class="card-body">
               <h5 class="card-title me_title">{{ about_me.0.surname }} {{ about_me.0.name }}</h5>
               <p class="card-text me_text">{{ about_me.0.description }}.</p>
