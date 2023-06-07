@@ -64,12 +64,15 @@
           color: #6C63FF;
           text-decoration: underline;
         }
+        .card_botton{
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1 class="h1_experience">My experience</h1>
     {% for experience in experiences %}
-    <div class="card card_experience m-5">
+    <div class="card card_experience card_botton">
        <div class="card-body">
           <h5 class="card-title me_title">{{ experience.experience_name }}</h5>
           <p class="card-text me_text">{{ experience.experience_description }}.</p>
